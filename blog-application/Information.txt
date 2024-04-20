@@ -1,0 +1,12 @@
+1. app folder: in the app folder i have model, http connections and also providers
+2. bootstrap: here i have cache data, app file which is for routing and also providers
+file if i have custom providers then i'll declare them here
+3. config folder: all the configuration of the framework from cache to database.
+4. database folder: factories and seeders are necessary to generate dummy data and
+migrations has all the tables.
+5. public folder: here all the public files. index.php runs first
+6. resources: css,js, views are here
+7. routes: all the routing
+8. storage: cache, framework cache, logs are all saved here
+9. tests for test writing
+10. vendor for third party packages. 
