@@ -9,4 +9,42 @@ migrations has all the tables.
 7. routes: all the routing
 8. storage: cache, framework cache, logs are all saved here
 9. tests for test writing
-10. vendor for third party packages. 
+10. vendor for third party packages.
+
+
+php artisan make:factory BlogFactory --model=Blog: this will create a factory for the blog model
+php artisan migrate: this will migrate the tables
+php artisan make:model Blog -m: this will create a model and migration file
+php artisan make:controller Sample1Controller --resource: this will create a controller with all the methods
+php artisan db:seed: this will seed the data to database
+
+Steps to generate fake data:
+    1. create a factory
+    2. create a seeder
+    3. run the seeder
+
+
+What is resource controller class?
+Ans:
+    Resource controllers make it easier to build RESTful controllers around resources. For example, you may wish to create a controller
+    that manages blog posts, where the controller class has methods for each of the RESTful actions to display, create, update, and
+    delete posts. Instead of defining all of the routes for these actions, a resource controller will provide a convenient way to
+     define them all in one place.
+
+    php artisan make:controller BlogController --resource
+
+    This command will generate a controller at app/Http/Controllers/BlogController.php. The controller will contain a method for each
+    of the available resource operations.
+
+    The --resource flag will create a controller with the following methods: index, create, store, show, edit, update, destroy.
+
+    The --model flag can be used to specify the model that the controller will be working with. This will generate the controller
+    with the necessary methods to interact with the specified model.
+
+    php artisan make:controller BlogController --resource --model=Blog
+
+    This command will generate a controller that is specifically designed to work with the Blog model. The controller will contain
+     methods for all of the available resource operations, and will interact with the Blog model.
+
+    Resource controllers provide a convenient way to build RESTful controllers around resources, and can save time and effort when
+    building applications that require CRUD operations on resources.
