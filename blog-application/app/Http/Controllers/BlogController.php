@@ -11,7 +11,9 @@ class BlogController extends Controller {
      */
     public function index() {
         // foldername.filename
-        $blogs = Blog::orderBy('created_at', 'DESC')->paginate(10);
+        // $blogs = Blog::orderBy('created_at', 'DESC')->paginate(10);
+        // filtering
+        $blogs = Blog::query()->where("user_id", request()->user()->id)->orderBy('created_at', 'DESC')->paginate(10);
         return view('blog.index', [
             'blogs' => $blogs,
         ]);

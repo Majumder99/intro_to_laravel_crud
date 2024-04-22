@@ -10,7 +10,7 @@
 
 
 {{-- component --}}
-<x-layout>
+<x-app-layout>
     <div>
         <div class="container">
             <a href="{{ route('blog.create') }}" class="create-blog-button">Create New Blog</a>
@@ -53,4 +53,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-app-layout>

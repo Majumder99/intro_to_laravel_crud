@@ -48,3 +48,13 @@ Ans:
 
     Resource controllers provide a convenient way to build RESTful controllers around resources, and can save time and effort when
     building applications that require CRUD operations on resources.
+
+
+
+When existing project?
+first call composer install
+npm install
+npm run build
+php artisan migrate
+php artisan db:seed
+php artisan serve
