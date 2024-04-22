@@ -61,6 +61,7 @@ class BlogController extends Controller {
      * Update the specified resource in storage.
      */
     public function update(Request $request, blog $blog) {
+        // we can directly access the blog but we are first validating the data
         $data = $request->validate([
             'title' => 'required|string',
             'description' => 'required|string',
@@ -73,6 +74,7 @@ class BlogController extends Controller {
      * Remove the specified resource from storage.
      */
     public function destroy(blog $blog) {
-        //
+        $blog->delete();
+        return to_route('blog.index')->with('success', 'Blog has successfully deleted.');
     }
 }

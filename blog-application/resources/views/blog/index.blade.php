@@ -37,6 +37,7 @@
                                 <a href="{{ route('blog.show', $blog) }}" class="action-link view-link">View</a>
                                 <a href="{{ route('blog.edit', $blog) }}" class="action-link edit-link">Edit</a>
                                 <form action="{{ route('blog.destroy', $blog) }}" method="post">
+                                    {{-- we are dynamically changing from post method to delete method using @method("delete") --}}
                                     @method('DELETE')
                                     @csrf
                                     <button onclick="return confirm('Are you sure want to delete?')"
